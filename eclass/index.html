@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<title>e-Class Downloader</title>
+		<style>
+			.main {
+				margin-top: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container main">
+			<h4>브라우저에 추가하기</h4>
+			<p>e-Class에 업로드 된 사이버 강의를 다운로드 받기 위해 만들어진 북마클릿입니다.</p>
+			<p>북마크에 추가한 뒤 다운로드 받을 강의 페이지에 들어가서 북마크를 클릭하면 실행됩니다.</p>
+			<ul class="nav nav-pills"> <!-- nav-tabs -->
+				<li class="nav-item">
+					<a class="nav-link active" data-toggle="tab" href="#tab_0_1">북마크 바에 추가</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#tab_0_2">북마크에 추가</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane fade show active" id="tab_0_1">
+				<p class="text-center">
+					<a title="e-Class Download" 
+					href='javascript:(function(){var a=document.createElement("script");a.src="https://rawcdn.githack.com/B1anc/Tools/master/bufs_eclass.min.js?_="+Date.now();document.body.appendChild(a)})();'
+					class="btn btn-outline-secondary">
+						<svg style="margin-bottom: 5px;" class="bi bi-star" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.523-3.356c.329-.314.158-.888-.283-.95l-4.898-.696L8.465.792a.513.513 0 00-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767l-3.686 1.894.694-3.957a.565.565 0 00-.163-.505L1.71 6.745l4.052-.576a.525.525 0 00.393-.288l1.847-3.658 1.846 3.658a.525.525 0 00.393.288l4.052.575-2.906 2.77a.564.564 0 00-.163.506l.694 3.957-3.686-1.894a.503.503 0 00-.461 0z" clip-rule="evenodd"/>
+						</svg> e-Class Download
+					</a><br>
+					<span style="font-size: 10px">아래의 이미지와 같이 위의 버튼을 북마크바로 드래그하세요</span><br>
+					<span style="font-size: 10px">Ctrl+Shift+B 키를 눌러 북마크바를 여닫을 수 있습니다.</span><br>
+					<img src="./res/img03.GIF" class="img-thumbnail">
+				</p>
+				</div>
+				<div class="tab-pane fade" id="tab_0_2">
+					<span style="font-size: 10px">* 이 설명은 구글 크롬을 기준으로 작성되었습니다.</span>
+					<textarea onclick="this.select();document.execCommand('copy');" class="form-control" readonly>javascript:(function(){var a=document.createElement("script");a.src="https://rawcdn.githack.com/B1anc/Tools/master/bufs_eclass.min.js?_="+Date.now();document.body.appendChild(a)})();</textarea>
+					<div style="padding: 10px;">
+						<h5>1. 위의 텍스트를 복사합니다.</h5>
+						<h5>2. Ctrl + D 키를 누르거나 주소창의 북마크 추가 버튼을 클릭합니다.</h5>
+						<img src="./res/img01.PNG" class="img-thumbnail">
+						<h5>3. 더보기.. 버튼을 클릭합니다.</h5>
+						<img src="./res/img02.PNG" class="img-thumbnail">
+						<h5>4. URL에 복사한 텍스트를 붙여넣고 이름을 원하는 이름으로 수정하고 저장합니다.</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container main">
+			<h4>요구사항</h4>
+			<p>최신버전의 Chromium 브라우저를 권장합니다. (Chrome, Whale, Chromium Edge 등)</p>
+			<p>Firefox 및 EdgeHTML에서도 동작하는 것이 확인되었지만, 일부 기능이 제대로 동작하지 않았습니다.</p>
+		</div>
+		<div class="container main">
+			<h4>지원하는 기능</h4>
+			<p><bold>강의콘텐츠</bold> 탭에서 특정한 차시의 페이지에 들어간 경우에만 동작하며 그 외의 탭에서는 동작하지 않습니다.</p>
+			<p>아래 목록에 없는 타입의 경우 스크립트 오류가 발생하거나 다운로드가 되지 않을 수 있습니다.</p>
+			<table class="table">
+				<tbody>
+					<tr>
+						<th>텍스트 타입</th>
+						<td>HTML로 다운로드</td>
+					</tr>
+					<tr>
+						<th>비디오 타입</th>
+						<td>영상 다운로드</td>
+					</tr>
+					<tr>
+						<th>ReadyStream 타입</th>
+						<td>분할된 음성 / 영상 / 슬라이드 이미지 / 필기 다운로드</td>
+					</tr>
+					<tr>
+						<th></th>
+						<td>또는 <abbr title="스크립트 환경설정에서 해당 옵션을 직접 활성화해야합니다." data-toggle="tooltip" data-placement="right">원본 rsz파일 다운로드</abbr></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<script>
+			$(function () {
+				$('[data-toggle="tooltip"]').tooltip()
+			})
+		</script>
+	</body>
+</html>
