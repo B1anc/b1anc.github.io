@@ -61,6 +61,7 @@
 		<div class="container main">
 			<h4>지원하는 기능</h4>
 			<p><bold>강의콘텐츠</bold> 탭에서 특정한 차시의 페이지에 들어간 경우에만 동작하며 그 외의 탭에서는 동작하지 않습니다.</p>
+			<p>마감되어 잠긴 콘텐츠의 다운로드는 가능하나, 완전히 목록에서 지워진 콘텐츠의 경우 다운로드가 불가능합니다.</p>
 			<p>아래 목록에 없는 타입의 경우 스크립트 오류가 발생하거나 다운로드가 되지 않을 수 있습니다.</p>
 			<table class="table">
 				<tbody>
@@ -94,6 +95,14 @@
 			$(function () {
 				$('[data-toggle="tooltip"]').tooltip()
 			})
+		</script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163823761-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-163823761-1');
 		</script>
 	</body>
 </html>
